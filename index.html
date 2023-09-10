@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+
+</head>
+
+<style>
+
+body {
+  background-image: url('data:image/png;base64,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');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+</style>
+
+<body onload="initClock()">
+    <div class="alarm">
+<center>
+        <!-- Digital clock shows date and time -->
+        <div class="datetime">
+            <div class="date"> 
+                <span id="dayName">Day</span>,
+                <span id="month">Month</span>,
+                <span id="dayNum">00</span>,
+                <span id="year">Year</span>
+            </div>
+
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>:
+                <span id="period">AM</span>
+            </div>
+            
+        </div></center>
+
+        <left>
+        <!-- To set alarms -->
+        <div class="setAlarm">
+
+            <div class="column">
+                <select >
+                    <option value="setHour" selected hidden>Hour</option>
+                </select>
+            </div>
+
+            <div class="column">
+                <select >
+                    <option value="setMinute" selected hidden>Minute</option>
+                </select>
+            </div>
+
+            <div class="column">
+                <select >
+                    <option value="AM/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+
+            <button id="btn-setAlarm" type="submit">Set Alarm</button>
+
+            <button id="stopAlarm" onclick="stopAlarm()">Stop Alarm</button>
+        </div>
+
+      
+
+        <h3 id="alarm-h3"></h3>
+
+
+        <!-- List will show all set alarms -->
+        <div class="alarmList"></div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</center>
+</body>
+</html>
